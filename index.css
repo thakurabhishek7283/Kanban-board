@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   box-sizing: border-box;
@@ -21,57 +23,89 @@ body {
       rgba(213, 93, 100, 1) 66%,
       rgba(228, 145, 41, 1) 66%
     );
-  font-family: "Sacramento", cursive;
+  font-family: Quicksand, sans-serif;
 }
 .body-container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .list-container {
-  text-align: center;
-  flex: 1;
-  padding: 0;
+  box-shadow: 0px 6px 10px rgb(255, 255, 255);
   display: flex;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   flex-direction: column;
-  overflow-y: auto;
-  margin: 1rem;
+  align-items: center;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.219);
 }
 .list-item {
   list-style: none;
-  font-size: 2.5em;
   min-height: 100px;
   width: 250px;
-  flex-grow: 1;
+  max-height: 200px;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   margin: 1rem;
   text-align: center;
+  overflow-y: auto;
+  color: white;
 }
 .list-item:hover {
+  cursor: grab;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
 }
 
-.input-item {
+.input-button {
   font-family: "Courier New", Courier, monospace;
   width: 200px;
   background-color: rgb(180, 93, 93);
   min-height: 12px;
   font-size: x-large;
-  display: inline-block;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   padding: 2px 3px;
+  text-align: center;
+  margin-bottom: 15px;
 }
-.input-item:hover {
+.input-button:hover {
   transform: scale(1.01);
   text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.6);
   transition: all 0.3s;
+  cursor: grabbing;
 }
 header {
   text-align: center;
   padding: 2px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  margin: 8px 6px;
+}
+#textfield {
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.on-backlogs {
+  background-color: #a2622d;
+}
+.on-hold {
+  background-color: #a22d22;
+}
+.in-progress {
+  background-color: #1b6161;
+}
+.on-complete {
+  background-color: #248224;
+}
+.heading {
+  margin: 8px;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+  width: 250px;
+  color: white;
+}
+.item-container-list {
+  max-height: 50vh;
+  overflow-y: scroll;
 }

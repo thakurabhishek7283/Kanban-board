@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  background-image: radial-gradient(
+      ellipse at bottom left,
+      rgba(0, 163, 203, 1) 40%,
+      rgba(0, 163, 203, 0) 40%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(0, 163, 203, 1) 30%,
+      rgba(0, 163, 203, 0) 30%
+    ),
+    linear-gradient(
+      to right,
+      rgba(98, 87, 147, 1) 0%,
+      rgba(98, 87, 147, 1) 33%,
+      rgba(213, 93, 100, 1) 33%,
+      rgba(213, 93, 100, 1) 66%,
+      rgba(228, 145, 41, 1) 66%
+    );
+  font-family: "Sacramento", cursive;
+}
+.body-container {
+  display: flex;
+  justify-content: space-around;
+}
+.list-container {
+  text-align: center;
+  flex: 1;
+  padding: 0;
+  display: flex;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 1rem;
+}
+.list-item {
+  list-style: none;
+  font-size: 2.5em;
+  min-height: 100px;
+  width: 250px;
+  flex-grow: 1;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  margin: 1rem;
+  text-align: center;
+}
+.list-item:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.input-item {
+  font-family: "Courier New", Courier, monospace;
+  width: 200px;
+  background-color: rgb(180, 93, 93);
+  min-height: 12px;
+  font-size: x-large;
+  display: inline-block;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  padding: 2px 3px;
+}
+.input-item:hover {
+  transform: scale(1.01);
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+header {
+  text-align: center;
+  padding: 2px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}

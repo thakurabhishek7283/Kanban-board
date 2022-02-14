@@ -18,68 +18,73 @@
       <h1>Kanban Board</h1>
     </header>
     <div class="body-container">
-      <div class="list-container">
+      <div class="list-container backlogs-container">
         <h2 class="heading on-backlogs">Backlogs</h2>
-        <ul id="first-container" class="item-container-list">
-          <li class="list-item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          </li>
-        </ul>
+        <ul
+          id="backlogs-container"
+          class="item-container-list"
+          ondrop="handledrop(event)"
+          ondragover="handledragover(event)"
+          ondragenter="dragAllow(0)"
+        ></ul>
         <textarea
           name="textfield-card"
-          id="textfield"
+          class="textfield"
           cols="30"
           rows="3"
         ></textarea>
-        <div class="input-button">ADD ITEM</div>
+        <div class="input-button" onclick="addToColumn(0)">ADD ITEM</div>
       </div>
-      <div class="list-container">
+      <div class="list-container progress-container">
         <h2 class="heading in-progress">In Progress</h2>
-        <ul id="second-container" class="item-container-list">
-          <li class="list-item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            illum accusamus ex praesentium quis? Perferendis veniam pariatur
-          </li>
-        </ul>
+        <ul
+          id="progress-container"
+          class="item-container-list"
+          ondrop="handledrop(event)"
+          ondragover="handledragover(event)"
+          ondragenter="dragAllow(1)"
+        ></ul>
         <textarea
           name="textfield-card"
-          id="textfield"
+          class="textfield"
           cols="30"
           rows="3"
         ></textarea>
-        <div class="input-button">ADD ITEM</div>
+        <div class="input-button" onclick="addToColumn(1)">ADD ITEM</div>
       </div>
-      <div class="list-container">
+      <div class="list-container complete-container">
         <h2 class="heading on-complete">Complete</h2>
-        <ul id="third-container" class="item-container-list">
-          <li class="list-item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            illum accusamus ex praesentium quis? Perferendis veniam pariatur
-          </li>
-        </ul>
+        <ul
+          id="complete-container"
+          class="item-container-list"
+          ondrop="handledrop(event)"
+          ondragover="handledragover(event)"
+          ondragenter="dragAllow(2)"
+        ></ul>
         <textarea
           name="textfield-card"
-          id="textfield"
+          class="textfield"
           cols="30"
           rows="3"
         ></textarea>
-        <div class="input-button">ADD ITEM</div>
+        <div class="input-button" onclick="addToColumn(2)">ADD ITEM</div>
       </div>
-      <div class="list-container">
+      <div class="list-container hold-container">
         <h2 class="heading on-hold">On Hold</h2>
-        <ul id="fourth-container" class="item-container-list">
-          <li class="list-item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            illum accusamus ex praesentium quis? Perferendis veniam pariatur
-          </li>
-        </ul>
+        <ul
+          id="hold-container"
+          class="item-container-list"
+          ondrop="handledrop(event)"
+          ondragover="handledragover(event)"
+          ondragenter="dragAllow(3)"
+        ></ul>
         <textarea
           name="textfield-card"
-          id="textfield"
+          class="textfield"
           cols="30"
           rows="3"
         ></textarea>
-        <div class="input-button">ADD ITEM</div>
+        <div class="input-button" onclick="addToColumn(3)">ADD ITEM</div>
       </div>
     </div>
     <script src="script.js"></script>

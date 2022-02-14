@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --backlog: #a2622d;
+  --hold: #a22d22;
+  --progress: #1b6161;
+  --complete: #248224;
+}
 body {
   box-sizing: border-box;
   background-image: radial-gradient(
@@ -41,14 +47,14 @@ body {
   list-style: none;
   min-height: 100px;
   width: 250px;
-  max-height: 200px;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   margin: 1rem;
   text-align: center;
-  overflow-y: auto;
   color: white;
+  word-wrap: normal;
+  overflow-x: hidden;
 }
 .list-item:hover {
   cursor: grab;
@@ -80,7 +86,7 @@ header {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   margin: 8px 6px;
 }
-#textfield {
+.textfield {
   border-radius: 10px;
   margin-bottom: 1em;
 }
@@ -106,6 +112,24 @@ header {
   color: white;
 }
 .item-container-list {
+  min-height: 10vh;
   max-height: 50vh;
   overflow-y: scroll;
+}
+
+.over {
+  padding: 50px 10px;
+}
+
+.backlogs-container .over {
+  background-color: var(--backlog);
+}
+.progress-container .over {
+  background-color: var(--progress);
+}
+.hold-container .over {
+  background-color: var(--hold);
+}
+.complete-container .over {
+  background-color: var(--complete);
 }
